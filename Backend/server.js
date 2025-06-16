@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const UserRoutes = require('./Routes/UserRoutes');
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -27,3 +28,5 @@ mongoose.connect(process.env.MONGO_URI)
 app.get('/', (req, res) => {
   res.send('Welcome to the Backend Server!');
 });
+
+app.use('/User', UserRoutes);
