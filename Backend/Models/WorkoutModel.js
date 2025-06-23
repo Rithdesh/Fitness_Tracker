@@ -11,7 +11,7 @@ const workoutSchema = new mongoose.Schema({
     trim: true
   },
   duration: {
-    type: Number, // in minutes
+    type: Number, 
     required: true
   },
   date: {

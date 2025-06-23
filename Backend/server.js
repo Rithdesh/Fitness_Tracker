@@ -57,5 +57,5 @@ app.get('/', (req, res) => {
 
 app.use('/User', UserRoutes);
 app.use('/Workout', WorkoutRoutes);
-// app.use('/Goal', GoalRoutes);
-// app.use('/Meal', MealRoutes);
+app.use('/Goal', GoalRoutes);
+app.use('/Meal', MealRoutes);

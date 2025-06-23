@@ -54,7 +54,7 @@ const getWorkoutById = async (req, res) => {
 const updateWorkout = async (req, res) => {
   try {
     const { id } = req.params;
-    const userId = req.user.id; // Get user ID from JWT token
+    const userId = req.user.id; 
     const { title, description, duration, date } = req.body;
 
     const updatedWorkout = await workout.findOneAndUpdate(
@@ -76,7 +76,7 @@ const updateWorkout = async (req, res) => {
 const deleteWorkout = async (req, res) => {
   try {
     const { id } = req.params;
-    const userId = req.user.id; // Get user ID from JWT token
+    const userId = req.user.id; 
 
     const deletedWorkout = await workout.findOneAndDelete({ _id: id, user: userId });
 
